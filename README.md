@@ -1,45 +1,79 @@
 # Prompt Engineering Assistant
 
-En webapplikation der hjælper brugere med at skabe effektive prompts til Large Language Models (LLMs).
+A web application that helps users create effective prompts for Large Language Models (LLMs).
 
-## Funktioner
+## Features
 
-- **Prompt Builder**: Trin-for-trin guide til at bygge effektive prompts
-- **Talk with Guidelines**: Spørg direkte om prompt engineering best practices
-- **Improve Prompt**: Få automatiske forbedringer til eksisterende prompts
-- **Example Prompts**: Se kuraterede eksempler på effektive prompts
-- **Saved Prompts**: Gem og organiser dine prompts (premium feature)
+- **Prompt Builder**: Step-by-step guide to building effective prompts
+- **Talk with Guidelines**: Ask questions directly about prompt engineering best practices
+- **Improve Prompt**: Get automatic improvements for existing prompts
+- **Example Prompts**: Browse curated examples of effective prompts
+- **Saved Prompts**: Save and organize your prompts (premium feature)
 
-## Teknologier
+## Technologies
 
 - Frontend: HTML, JavaScript, Tailwind CSS
 - Backend: Deno / Deno Deploy
 - LLM Integration: Google Gemini API
 
-## Setup
+## Getting Started
 
-1. Installer Deno:
+1. Install Deno:
    ```bash
    curl -fsSL https://deno.land/x/install/install.sh | sh
    ```
 
-2. Klon repository:
+2. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/netsi1964/prompt-engineering-assistant.git
    cd prompt-engineering-assistant
    ```
 
-3. Start udviklings-server:
+3. Start the development server:
    ```bash
    deno task dev
    ```
 
-4. Åbn `http://localhost:8000` i din browser
+4. Open `http://localhost:8000` in your browser
 
-## Bidrag
+## Project Structure
 
-Bidrag er velkomne! Se venligst vores contributing guidelines for mere information.
+```
+prompt-engineering-assistant/
+├── docs/               # Documentation
+│   └── prd.md         # Product Requirements Document
+├── all.html           # Main application file
+├── translations.json  # UI text translations
+└── example-prompts.json # Curated example prompts
+```
 
-## Licens
+## Features in Detail
 
-Dette projekt er licenseret under MIT License - se LICENSE filen for detaljer. 
+### Prompt Builder
+- Step-by-step prompt creation process
+- Key elements selection
+- Advanced techniques integration
+- Context and examples management
+
+### Talk with Guidelines
+- Direct Q&A about prompt engineering
+- Based on comprehensive guidelines
+- Real-time responses from Gemini
+
+### Improve Prompt
+- Automatic prompt analysis
+- Specific improvement suggestions
+- Direct integration with builder
+
+### Example Prompts
+- Categorized prompt examples
+- One-click use in builder
+- Various use cases covered
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
