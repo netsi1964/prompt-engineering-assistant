@@ -228,39 +228,47 @@
                     </div>
 
                     <div class="step" data-step="2">
-                        <h3 class="text-xl font-medium text-gray-800 mb-4">2. Draft Key Elements</h3>
-                        <p class="text-gray-600 mb-4">Identify and include the essential components your prompt needs.</p>
+                        <h3 class="text-xl font-semibold mb-4">2. Draft Key Elements</h3>
+                        <p class="text-gray-600 mb-6">Identify and include the essential components your prompt needs.</p>
                         
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Key Elements (Select all that apply)</label>
-                                <div class="space-y-2">
+                                <h4 class="font-medium mb-3" data-translation="BUILDER.ELEMENTS">Key Elements (Select all that apply)</h4>
+                                <div class="space-y-3">
                                     <label class="flex items-center">
-                                        <input type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                        <span class="ml-2 text-gray-700">Clear instructions</span>
+                                        <input type="checkbox" data-key="CLEAR_INSTRUCTIONS" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.CLEAR_INSTRUCTIONS">Clear instructions</span>
                                     </label>
                                     <label class="flex items-center">
-                                        <input type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                        <span class="ml-2 text-gray-700">Specific constraints</span>
+                                        <input type="checkbox" data-key="SPECIFIC_CONSTRAINTS" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.SPECIFIC_CONSTRAINTS">Specific constraints</span>
                                     </label>
                                     <label class="flex items-center">
-                                        <input type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                        <span class="ml-2 text-gray-700">Desired format</span>
+                                        <input type="checkbox" data-key="DESIRED_FORMAT" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.DESIRED_FORMAT">Desired format</span>
                                     </label>
                                     <label class="flex items-center">
-                                        <input type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                        <span class="ml-2 text-gray-700">Tone/style guidance</span>
+                                        <input type="checkbox" data-key="TONE_STYLE" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.TONE_STYLE">Tone/style guidance</span>
                                     </label>
                                     <label class="flex items-center">
-                                        <input type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
-                                        <span class="ml-2 text-gray-700">Length requirements</span>
+                                        <input type="checkbox" data-key="LENGTH_REQUIREMENTS" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.LENGTH_REQUIREMENTS">Length requirements</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" data-key="TARGET_AUDIENCE" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.TARGET_AUDIENCE">Target audience</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" data-key="ERROR_HANDLING" class="form-checkbox h-5 w-5 text-indigo-600">
+                                        <span class="ml-2" data-translation="PROMPT_ELEMENTS.ERROR_HANDLING">Error handling</span>
                                     </label>
                                 </div>
                             </div>
                             
                             <div>
-                                <label for="elements-text" class="block text-sm font-medium text-gray-700 mb-2">Additional Elements</label>
-                                <textarea id="elements-text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 prompt-textarea" placeholder="Add any other important elements your prompt should include"></textarea>
+                                <h4 class="font-medium mb-3">Additional Elements</h4>
+                                <textarea id="additional-elements" class="w-full h-32 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Add any other important elements your prompt needs..."></textarea>
                             </div>
                         </div>
                         
@@ -579,7 +587,7 @@
                 <div id="examples-tab" class="tab-content">
                     <div class="mb-6">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-2">Example Prompts</h2>
-                        <p class="text-gray-600">Browse and search through our collection of high-quality example prompts.</p>
+                        <p class="text-gray-600">Browse through our collection of high-quality example prompts with complete settings.</p>
                     </div>
                     
                     <div class="mb-6">
@@ -592,109 +600,80 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="examples-container">
-                        <!-- Creative Writing Examples -->
+                        <!-- Creative Writing Example -->
                         <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
                             <div class="flex items-center mb-4">
                                 <div class="bg-indigo-100 rounded-full p-2 mr-3">
                                     <i class="fas fa-pen-fancy text-indigo-600"></i>
                                 </div>
-                                <h3 class="text-lg font-medium text-gray-800">Creative Story</h3>
+                                <h3 class="text-lg font-medium text-gray-800">Science Fiction Story</h3>
                             </div>
                             <p class="text-gray-600 mb-4">Write a 500-word science fiction story set in 2150 about humanity's first contact with an alien civilization. The story should have a hopeful tone and include themes of cooperation and discovery.</p>
-                            <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-magic mr-2"></i> Use in Builder
-                            </button>
-                        </div>
-
-                        <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-indigo-100 rounded-full p-2 mr-3">
-                                    <i class="fas fa-pen-fancy text-indigo-600"></i>
-                                </div>
-                                <h3 class="text-lg font-medium text-gray-800">Poem Generator</h3>
+                            <div class="text-sm text-gray-500 mb-4">
+                                <div class="mb-2"><strong>Selected Elements:</strong></div>
+                                <ul class="list-disc list-inside mb-2">
+                                    <li>Clear instructions</li>
+                                    <li>Specific constraints</li>
+                                    <li>Desired format</li>
+                                    <li>Tone/style guidance</li>
+                                    <li>Length requirements</li>
+                                </ul>
+                                <div class="mb-2"><strong>Technique:</strong> Few-shot prompting</div>
+                                <div class="mb-2"><strong>Context:</strong> Story should have a hopeful tone and include themes of cooperation</div>
+                                <div><strong>Role:</strong> Expert science fiction writer</div>
                             </div>
-                            <p class="text-gray-600 mb-4">Write a haiku about the changing seasons, focusing on the transition from summer to autumn. Use vivid imagery and maintain the traditional 5-7-5 syllable structure.</p>
                             <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                                 <i class="fas fa-magic mr-2"></i> Use in Builder
                             </button>
                         </div>
 
-                        <!-- Code Generation Examples -->
+                        <!-- Code Generation Example -->
                         <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
                             <div class="flex items-center mb-4">
                                 <div class="bg-green-100 rounded-full p-2 mr-3">
                                     <i class="fas fa-code text-green-600"></i>
                                 </div>
-                                <h3 class="text-lg font-medium text-gray-800">Python Function</h3>
+                                <h3 class="text-lg font-medium text-gray-800">Python Function Generator</h3>
                             </div>
                             <p class="text-gray-600 mb-4">Write a Python function that takes a list of numbers and returns the sum of all even numbers. Include type hints, docstring, and error handling for non-numeric inputs.</p>
-                            <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-magic mr-2"></i> Use in Builder
-                            </button>
-                        </div>
-
-                        <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-green-100 rounded-full p-2 mr-3">
-                                    <i class="fas fa-code text-green-600"></i>
-                                </div>
-                                <h3 class="text-lg font-medium text-gray-800">React Component</h3>
+                            <div class="text-sm text-gray-500 mb-4">
+                                <div class="mb-2"><strong>Selected Elements:</strong></div>
+                                <ul class="list-disc list-inside mb-2">
+                                    <li>Clear instructions</li>
+                                    <li>Specific constraints</li>
+                                    <li>Desired format</li>
+                                    <li>Error handling</li>
+                                </ul>
+                                <div class="mb-2"><strong>Technique:</strong> Chain-of-thought</div>
+                                <div class="mb-2"><strong>Context:</strong> Function should follow PEP 8 style guidelines</div>
+                                <div><strong>Examples:</strong> Includes sample input/output pairs</div>
                             </div>
-                            <p class="text-gray-600 mb-4">Create a React component for a responsive navigation bar with dropdown menus. Use modern React hooks and include TypeScript types. The component should be mobile-friendly.</p>
                             <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                                 <i class="fas fa-magic mr-2"></i> Use in Builder
                             </button>
                         </div>
 
-                        <!-- Business Examples -->
-                        <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-blue-100 rounded-full p-2 mr-3">
-                                    <i class="fas fa-briefcase text-blue-600"></i>
-                                </div>
-                                <h3 class="text-lg font-medium text-gray-800">Email Template</h3>
-                            </div>
-                            <p class="text-gray-600 mb-4">Write a professional follow-up email after a job interview. The email should express gratitude, reiterate interest in the position, and include specific points discussed during the interview.</p>
-                            <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-magic mr-2"></i> Use in Builder
-                            </button>
-                        </div>
-
+                        <!-- Business Example -->
                         <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
                             <div class="flex items-center mb-4">
                                 <div class="bg-blue-100 rounded-full p-2 mr-3">
                                     <i class="fas fa-briefcase text-blue-600"></i>
                                 </div>
-                                <h3 class="text-lg font-medium text-gray-800">Marketing Copy</h3>
+                                <h3 class="text-lg font-medium text-gray-800">Marketing Email Generator</h3>
                             </div>
-                            <p class="text-gray-600 mb-4">Create a compelling product description for a new eco-friendly water bottle. Focus on its sustainable features, durability, and unique design. Target environmentally conscious consumers.</p>
-                            <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-magic mr-2"></i> Use in Builder
-                            </button>
-                        </div>
-
-                        <!-- Education Examples -->
-                        <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-purple-100 rounded-full p-2 mr-3">
-                                    <i class="fas fa-graduation-cap text-purple-600"></i>
-                                </div>
-                                <h3 class="text-lg font-medium text-gray-800">Study Guide</h3>
+                            <p class="text-gray-600 mb-4">Create a compelling marketing email for a new eco-friendly product launch. Focus on sustainability benefits, unique features, and include a clear call-to-action.</p>
+                            <div class="text-sm text-gray-500 mb-4">
+                                <div class="mb-2"><strong>Selected Elements:</strong></div>
+                                <ul class="list-disc list-inside mb-2">
+                                    <li>Clear instructions</li>
+                                    <li>Tone/style guidance</li>
+                                    <li>Desired format</li>
+                                    <li>Target audience</li>
+                                </ul>
+                                <div class="mb-2"><strong>Technique:</strong> Role assignment</div>
+                                <div class="mb-2"><strong>Context:</strong> Target environmentally conscious consumers</div>
+                                <div><strong>Role:</strong> Senior Marketing Copywriter</div>
                             </div>
-                            <p class="text-gray-600 mb-4">Create a comprehensive study guide for the American Civil War. Include key events, important figures, causes, and consequences. Format the information in an easy-to-review bullet point structure.</p>
-                            <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                                <i class="fas fa-magic mr-2"></i> Use in Builder
-                            </button>
-                        </div>
-
-                        <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
-                            <div class="flex items-center mb-4">
-                                <div class="bg-purple-100 rounded-full p-2 mr-3">
-                                    <i class="fas fa-graduation-cap text-purple-600"></i>
-                                </div>
-                                <h3 class="text-lg font-medium text-gray-800">Math Problem</h3>
-                            </div>
-                            <p class="text-gray-600 mb-4">Explain how to solve a quadratic equation using the quadratic formula. Include step-by-step instructions, a worked example, and common mistakes to avoid. Use clear, simple language.</p>
                             <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
                                 <i class="fas fa-magic mr-2"></i> Use in Builder
                             </button>
@@ -777,6 +756,48 @@
                         Share Prompt
                     </button>
                 </div>
+
+                <!-- Share URL Section -->
+                <div id="share-url-section" class="mt-6 hidden">
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">Share URL</h3>
+                        <div class="flex">
+                            <input type="text" id="share-url" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" readonly>
+                            <button id="copy-url-btn" class="px-4 py-2 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Share this URL to let others use your prompt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Load Prompt Modal -->
+        <div id="load-prompt-modal" class="auth-modal">
+            <div class="bg-white rounded-xl shadow-xl w-full max-w-md p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800">Load Shared Prompt</h2>
+                    <button id="close-load-modal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="prompt-url" class="block text-sm font-medium text-gray-700 mb-1">Prompt URL</label>
+                    <div class="flex">
+                        <input type="text" id="prompt-url" class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Paste the prompt URL here">
+                        <button id="load-prompt-btn" class="px-4 py-2 bg-indigo-600 text-white rounded-r-lg hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex justify-end space-x-3">
+                    <button id="cancel-load" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors">
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
         
@@ -788,24 +809,36 @@
     </div>
 
     <script>
-        // Tab switching functionality
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all tabs and buttons
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active', 'border-indigo-600'));
-                document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked button
-                btn.classList.add('active', 'border-indigo-600');
-                btn.classList.remove('border-transparent');
-                
-                // Show corresponding tab
-                const tabId = btn.getAttribute('data-tab');
-                if (tabId === 'build') {
-                    document.getElementById('build-prompt').classList.add('active');
-                } else {
-                    document.getElementById(tabId + '-tab').classList.add('active');
-                }
+        // Initialize the app
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set Build Prompt tab as active by default
+            document.getElementById('build-prompt').classList.add('active');
+            document.querySelector('[data-tab="build"]').classList.add('active', 'border-indigo-600');
+            document.querySelector('[data-tab="build"]').classList.remove('border-transparent');
+            
+            // Initialize progress bar
+            updateProgressBar();
+            
+            // Add event listeners for tab switching
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all tabs and buttons
+                    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+                    document.querySelectorAll('.tab-btn').forEach(btn => {
+                        btn.classList.remove('active', 'border-indigo-600');
+                        btn.classList.add('border-transparent');
+                    });
+                    
+                    // Add active class to clicked tab and button
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId === 'build') {
+                        document.getElementById('build-prompt').classList.add('active');
+                    } else {
+                        document.getElementById(tabId + '-tab').classList.add('active');
+                    }
+                    this.classList.add('active', 'border-indigo-600');
+                    this.classList.remove('border-transparent');
+                });
             });
         });
 
@@ -870,9 +903,18 @@
                 return;
             }
             
-            // In a real app, this would send the prompt to your backend
-            alert('Prompt shared successfully! Thank you for contributing to the community.');
-            shareModal.classList.remove('active');
+            // Generate a unique ID for the prompt
+            const promptId = generateUUID();
+            
+            // Create the share URL
+            const shareUrl = `${window.location.origin}${window.location.pathname}?prompt-id=${promptId}`;
+            
+            // Show the URL section
+            document.getElementById('share-url-section').classList.remove('hidden');
+            document.getElementById('share-url').value = shareUrl;
+            
+            // In a real app, this would save the prompt to your backend
+            alert('Prompt shared successfully! Copy the URL to share with others.');
         });
 
         // Example prompt search functionality
@@ -894,42 +936,67 @@
         document.querySelectorAll('#examples-container button').forEach(btn => {
             btn.addEventListener('click', function() {
                 const card = this.closest('.example-prompt-card');
-                const promptText = card.querySelector('p').textContent;
                 const title = card.querySelector('h3').textContent;
+                const promptText = card.querySelector('p').textContent;
+                
+                // Get selected elements
+                const selectedElements = Array.from(card.querySelectorAll('ul li')).map(li => ({
+                    type: 'checkbox',
+                    label: li.textContent.trim(),
+                    value: true
+                }));
+                
+                // Get technique
+                const techniqueText = card.querySelector('div:contains("Technique:")').textContent;
+                const technique = {
+                    type: techniqueText.includes('few-shot') ? 'few-shot' :
+                          techniqueText.includes('chain') ? 'chain-of-thought' :
+                          'role-assignment',
+                    details: ''
+                };
+                
+                // Get context
+                const contextEl = card.querySelector('div:contains("Context:")');
+                const context = {
+                    background: contextEl ? contextEl.textContent.replace('Context:', '').trim() : '',
+                    examples: card.querySelector('div:contains("Examples:")') ? 
+                             card.querySelector('div:contains("Examples:")').textContent.replace('Examples:', '').trim() : '',
+                    role: card.querySelector('div:contains("Role:")') ? 
+                          card.querySelector('div:contains("Role:")').textContent.replace('Role:', '').trim() : ''
+                };
+                
+                // Create the prompt object
+                const prompt = {
+                    metadata: {
+                        id: generateUUID(),
+                        title: title,
+                        description: promptText,
+                        category: card.querySelector('.fa-pen-fancy') ? 'creative' :
+                                 card.querySelector('.fa-code') ? 'code' :
+                                 card.querySelector('.fa-briefcase') ? 'business' : 'other',
+                        createdAt: new Date().toISOString(),
+                        updatedAt: new Date().toISOString(),
+                        isAnonymous: true,
+                        isPublic: true
+                    },
+                    goal: title,
+                    task: promptText,
+                    elements: selectedElements,
+                    technique: technique,
+                    context: context,
+                    finalPrompt: promptText,
+                    version: 1
+                };
                 
                 // Switch to builder tab
                 document.querySelector('.tab-btn[data-tab="build"]').click();
                 
-                // Reset to step 1
-                document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-                document.querySelector('.step[data-step="1"]').classList.add('active');
+                // Load the prompt into the builder
+                loadPromptIntoBuilder(prompt);
+                
+                // Set to step 1
                 currentStep = 1;
                 updateProgressBar();
-                
-                // Set the task input with the example prompt
-                document.getElementById('task-input').value = promptText;
-                document.getElementById('goal-input').value = title;
-                
-                // Check relevant checkboxes in step 2 based on the prompt content
-                const checkboxes = document.querySelectorAll('.step[data-step="2"] input[type="checkbox"]');
-                checkboxes.forEach(checkbox => {
-                    const label = checkbox.nextElementSibling.textContent.toLowerCase();
-                    if (promptText.toLowerCase().includes(label)) {
-                        checkbox.checked = true;
-                    }
-                });
-                
-                // Set technique in step 3 if applicable
-                if (promptText.toLowerCase().includes('example')) {
-                    document.getElementById('few-shot').checked = true;
-                } else if (promptText.toLowerCase().includes('step')) {
-                    document.getElementById('cot').checked = true;
-                } else if (promptText.toLowerCase().includes('role')) {
-                    document.getElementById('role').checked = true;
-                }
-                
-                // Show a confirmation
-                alert('Example prompt has been loaded into the builder. Please continue through the steps to refine it for your needs.');
             });
         });
 
@@ -1018,7 +1085,7 @@
                         if (currentStep === 5) {
                             const goal = document.getElementById('goal-input').value;
                             const task = document.getElementById('task-input').value;
-                            const elements = document.getElementById('elements-text').value;
+                            const elements = document.getElementById('additional-elements').value;
                             const technique = document.querySelector('input[name="technique"]:checked')?.id;
                             const techniqueDetails = document.getElementById('technique-details').value;
                             const context = document.getElementById('context-input').value;
@@ -1165,6 +1232,559 @@ Example structure:
 
         // Initialize auth state
         updateAuthState(false, 'guest');
+
+        // Load prompt functionality
+        const loadPromptModal = document.getElementById('load-prompt-modal');
+        const loadPromptBtn = document.getElementById('load-prompt-btn');
+        const closeLoadModal = document.getElementById('close-load-modal');
+        const cancelLoad = document.getElementById('cancel-load');
+        
+        // Add load prompt button to the UI
+        const loadPromptButton = document.createElement('button');
+        loadPromptButton.className = 'px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors';
+        loadPromptButton.innerHTML = '<i class="fas fa-download mr-2"></i>Load Prompt';
+        loadPromptButton.addEventListener('click', () => {
+            loadPromptModal.classList.add('active');
+        });
+        
+        // Add the load button to the final step
+        document.querySelector('.step[data-step="6"] .flex.justify-between').prepend(loadPromptButton);
+        
+        // Handle load prompt modal
+        closeLoadModal.addEventListener('click', () => {
+            loadPromptModal.classList.remove('active');
+        });
+        
+        cancelLoad.addEventListener('click', () => {
+            loadPromptModal.classList.remove('active');
+        });
+        
+        loadPromptModal.addEventListener('click', (e) => {
+            if (e.target === loadPromptModal) {
+                loadPromptModal.classList.remove('active');
+            }
+        });
+        
+        // Handle loading a prompt from URL
+        loadPromptBtn.addEventListener('click', async () => {
+            const promptUrl = document.getElementById('prompt-url').value;
+            if (!promptUrl) {
+                alert('Please enter a prompt URL');
+                return;
+            }
+            
+            try {
+                // Extract prompt ID from URL
+                const url = new URL(promptUrl);
+                const promptId = url.searchParams.get('prompt-id');
+                
+                if (!promptId) {
+                    throw new Error('Invalid prompt URL');
+                }
+                
+                // In a real app, this would make an API call to fetch the prompt
+                // For demo purposes, we'll simulate loading a prompt
+                const response = await fetch(`/api/prompts/${promptId}`);
+                const prompt = await response.json();
+                
+                // Load the prompt into the builder
+                loadPromptIntoBuilder(prompt);
+                
+                // Close the modal
+                loadPromptModal.classList.remove('active');
+            } catch (error) {
+                alert('Error loading prompt: ' + error.message);
+            }
+        });
+        
+        // Function to load a prompt into the builder
+        function loadPromptIntoBuilder(prompt) {
+            // Reset the builder
+            resetPromptBuilder();
+            
+            // Set the goal and task
+            document.getElementById('goal-input').value = prompt.metadata.title;
+            document.getElementById('task-input').value = prompt.task;
+            
+            // Set the elements
+            const checkboxes = document.querySelectorAll('.step[data-step="2"] input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const label = checkbox.getAttribute('data-key');
+                checkbox.checked = prompt.promptElements[label] || false;
+            });
+            
+            // Set the technique
+            const techniqueRadio = document.getElementById(prompt.technique.type.toLowerCase().replace('_', '-'));
+            if (techniqueRadio) {
+                techniqueRadio.checked = true;
+            }
+            document.getElementById('technique-details').value = prompt.technique.details;
+            
+            // Set context
+            if (prompt.context) {
+                document.getElementById('context-input').value = prompt.context.background || '';
+                document.getElementById('examples-input').value = prompt.context.examples || '';
+                document.getElementById('role-input').value = prompt.context.role || '';
+            }
+            
+            // Update the progress bar
+            currentStep = 1;
+            updateProgressBar();
+        }
+        
+        // Helper function to generate UUID
+        function generateUUID() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0;
+                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        
+        // Check for prompt ID in URL on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const promptId = urlParams.get('prompt-id');
+            
+            if (promptId) {
+                // In a real app, this would fetch the prompt from your backend
+                // For demo purposes, we'll just show the load modal
+                loadPromptModal.classList.add('active');
+                document.getElementById('prompt-url').value = window.location.href;
+            }
+        });
+
+        // Load translations and example prompts
+        let translations = {};
+        let examplePrompts = [];
+
+        // Function to get translation
+        function t(key) {
+            const keys = ['en', ...key.split('.')];
+            let value = translations;
+            for (const k of keys) {
+                value = value?.[k];
+            }
+            return value || key;
+        }
+
+        // Initialize translations
+        function initializeTranslations() {
+            document.querySelectorAll('[data-translation]').forEach(element => {
+                const key = element.getAttribute('data-translation');
+                element.textContent = t(key);
+            });
+        }
+
+        // Load translations and example prompts
+        async function initializeApp() {
+            try {
+                // Load translations directly in code for POC
+                translations = {
+                    "en": {
+                        "PROMPT_ELEMENTS": {
+                            "CLEAR_INSTRUCTIONS": "Clear instructions",
+                            "SPECIFIC_CONSTRAINTS": "Specific constraints",
+                            "DESIRED_FORMAT": "Desired format",
+                            "TONE_STYLE": "Tone/style guidance",
+                            "LENGTH_REQUIREMENTS": "Length requirements",
+                            "TARGET_AUDIENCE": "Target audience",
+                            "ERROR_HANDLING": "Error handling"
+                        },
+                        "TECHNIQUES": {
+                            "FEW_SHOT": "Few-shot Prompting",
+                            "CHAIN_OF_THOUGHT": "Chain-of-Thought",
+                            "ROLE_ASSIGNMENT": "Role Assignment"
+                        },
+                        "CATEGORIES": {
+                            "CREATIVE": "Creative",
+                            "CODE": "Code",
+                            "BUSINESS": "Business",
+                            "EDUCATION": "Education",
+                            "OTHER": "Other"
+                        },
+                        "BUILDER": {
+                            "STEPS": {
+                                "DEFINE_GOAL": "Define Goal",
+                                "DRAFT_ELEMENTS": "Draft Elements",
+                                "SELECT_TECHNIQUE": "Select Technique",
+                                "ADD_CONTEXT": "Add Context",
+                                "REFINEMENT": "Refinement",
+                                "REVIEW": "Review"
+                            },
+                            "ELEMENTS": "Key Elements (Select all that apply)",
+                            "TECHNIQUE": "Technique",
+                            "CONTEXT": {
+                                "BACKGROUND": "Context",
+                                "EXAMPLES": "Examples",
+                                "ROLE": "Role"
+                            }
+                        },
+                        "BUTTONS": {
+                            "NEXT": "Next",
+                            "BACK": "Back",
+                            "SAVE": "Save",
+                            "SHARE": "Share",
+                            "COPY": "Copy",
+                            "USE_IN_BUILDER": "Use in Builder"
+                        },
+                        "ANALYSIS": {
+                            "STRENGTHS": "Strengths",
+                            "WEAKNESSES": "Areas for Improvement",
+                            "SUGGESTIONS": "Suggestions"
+                        }
+                    }
+                };
+
+                // Load example prompts directly in code for POC
+                examplePrompts = [
+                    {
+                        metadata: {
+                            id: "creative-story-1",
+                            title: "Science Fiction Story",
+                            category: "CREATIVE",
+                            description: "Generate a creative sci-fi story about first contact"
+                        },
+                        goal: "Write an engaging science fiction story",
+                        task: "Write a 500-word science fiction story set in 2150 about humanity's first contact with an alien civilization. The story should have a hopeful tone and include themes of cooperation and discovery.",
+                        promptElements: {
+                            "CLEAR_INSTRUCTIONS": true,
+                            "SPECIFIC_CONSTRAINTS": true,
+                            "DESIRED_FORMAT": true,
+                            "TONE_STYLE": true,
+                            "LENGTH_REQUIREMENTS": true
+                        },
+                        technique: {
+                            type: "FEW_SHOT",
+                            details: "Using examples of successful first contact scenarios",
+                            examples: [
+                                {
+                                    input: "Write a story about peaceful alien contact",
+                                    output: "The silver ship descended silently through Earth's atmosphere, its intentions clearly peaceful..."
+                                },
+                                {
+                                    input: "Describe first communication between species",
+                                    output: "Through a combination of mathematical sequences and simple pictograms..."
+                                }
+                            ]
+                        },
+                        context: {
+                            background: "Story should have a hopeful tone and include themes of cooperation",
+                            examples: "Example of positive first contact stories from sci-fi literature",
+                            role: "Expert science fiction writer"
+                        }
+                    },
+                    {
+                        metadata: {
+                            id: "code-gen-1",
+                            title: "Python Function Generator",
+                            category: "CODE",
+                            description: "Generate a well-structured Python function"
+                        },
+                        goal: "Create a Python function for number processing",
+                        task: "Write a Python function that takes a list of numbers and returns the sum of all even numbers. Include type hints, docstring, and error handling for non-numeric inputs.",
+                        promptElements: {
+                            "CLEAR_INSTRUCTIONS": true,
+                            "SPECIFIC_CONSTRAINTS": true,
+                            "DESIRED_FORMAT": true,
+                            "ERROR_HANDLING": true
+                        },
+                        technique: {
+                            type: "CHAIN_OF_THOUGHT",
+                            details: "Breaking down the function implementation steps",
+                            steps: [
+                                "1. First, we'll define the function with proper type hints",
+                                "2. Add input validation to check for list type",
+                                "3. Create a loop to process numbers",
+                                "4. Add error handling for non-numeric values",
+                                "5. Calculate sum of even numbers",
+                                "6. Return the result with proper type"
+                            ]
+                        },
+                        context: {
+                            background: "Function should follow PEP 8 style guidelines",
+                            examples: "Input: [1,2,3,4] → Output: 6 (2+4)",
+                            role: "Senior Python Developer"
+                        }
+                    },
+                    {
+                        metadata: {
+                            id: "business-1",
+                            title: "Marketing Email Generator",
+                            category: "BUSINESS",
+                            description: "Create compelling marketing emails"
+                        },
+                        goal: "Write an effective marketing email",
+                        task: "Create a compelling marketing email for a new eco-friendly product launch. Focus on sustainability benefits, unique features, and include a clear call-to-action.",
+                        promptElements: {
+                            "CLEAR_INSTRUCTIONS": true,
+                            "TONE_STYLE": true,
+                            "DESIRED_FORMAT": true,
+                            "TARGET_AUDIENCE": true
+                        },
+                        technique: {
+                            type: "ROLE_ASSIGNMENT",
+                            details: "Taking on the role of an experienced marketing copywriter",
+                            role: {
+                                background: "Senior Marketing Copywriter with 10+ years experience in sustainable product launches",
+                                expertise: "Specializing in eco-friendly product marketing and customer engagement",
+                                style: "Professional yet approachable, with focus on environmental impact"
+                            }
+                        },
+                        context: {
+                            background: "Target environmentally conscious consumers",
+                            examples: "Previous successful eco-product launches",
+                            role: "Senior Marketing Copywriter"
+                        }
+                    }
+                ];
+                
+                // Initialize translations
+                initializeTranslations();
+                
+                // Render example prompts
+                renderExamplePrompts();
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        // Render example prompts
+        function renderExamplePrompts() {
+            const container = document.getElementById('examples-container');
+            container.innerHTML = examplePrompts.map(prompt => {
+                const categoryIcon = getCategoryIcon(prompt.metadata.category);
+                const elements = Object.entries(prompt.promptElements)
+                    .filter(([_, value]) => value)
+                    .map(([key]) => `<li>${t(`PROMPT_ELEMENTS.${key}`)}</li>`)
+                    .join('');
+
+                return `
+                    <div class="example-prompt-card bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-all">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-${categoryIcon.bg} rounded-full p-2 mr-3">
+                                <i class="fas fa-${categoryIcon.icon} text-${categoryIcon.color}"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-gray-800">${prompt.metadata.title}</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">${prompt.task}</p>
+                        <div class="text-sm text-gray-500 mb-4">
+                            <div class="mb-2"><strong>${t('BUILDER.ELEMENTS')}:</strong></div>
+                            <ul class="list-disc list-inside mb-2">
+                                ${elements}
+                            </ul>
+                            <div class="mb-2"><strong>${t('BUILDER.TECHNIQUE')}:</strong> ${t(`TECHNIQUES.${prompt.technique.type}`)}</div>
+                            ${prompt.context.background ? `<div class="mb-2"><strong>${t('BUILDER.CONTEXT.BACKGROUND')}:</strong> ${prompt.context.background}</div>` : ''}
+                            ${prompt.context.examples ? `<div class="mb-2"><strong>${t('BUILDER.CONTEXT.EXAMPLES')}:</strong> ${prompt.context.examples}</div>` : ''}
+                            ${prompt.context.role ? `<div><strong>${t('BUILDER.CONTEXT.ROLE')}:</strong> ${prompt.context.role}</div>` : ''}
+                        </div>
+                        <button class="w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+                            <i class="fas fa-magic mr-2"></i> ${t('BUTTONS.USE_IN_BUILDER')}
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            // Add click handlers for the example cards
+            document.querySelectorAll('#examples-container button').forEach((btn, index) => {
+                btn.addEventListener('click', () => loadExamplePrompt(examplePrompts[index]));
+            });
+        }
+
+        // Helper function to get category icon
+        function getCategoryIcon(category) {
+            const icons = {
+                'CREATIVE': { icon: 'pen-fancy', bg: 'indigo-100', color: 'indigo-600' },
+                'CODE': { icon: 'code', bg: 'green-100', color: 'green-600' },
+                'BUSINESS': { icon: 'briefcase', bg: 'blue-100', color: 'blue-600' },
+                'EDUCATION': { icon: 'graduation-cap', bg: 'purple-100', color: 'purple-600' },
+                'OTHER': { icon: 'star', bg: 'gray-100', color: 'gray-600' }
+            };
+            return icons[category] || icons['OTHER'];
+        }
+
+        // Load example prompt into builder
+        function loadExamplePrompt(prompt) {
+            // Switch to builder tab
+            document.querySelector('.tab-btn[data-tab="build"]').click();
+            
+            // Set goal and task
+            document.getElementById('goal-input').value = prompt.goal;
+            document.getElementById('task-input').value = prompt.task;
+            
+            // Set elements
+            const checkboxes = document.querySelectorAll('.step[data-step="2"] input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const key = checkbox.getAttribute('data-key');
+                checkbox.checked = prompt.promptElements[key] || false;
+            });
+            
+            // Set technique and its details
+            const techniqueId = prompt.technique.type.toLowerCase().replace('_', '-');
+            const techniqueRadio = document.getElementById(techniqueId);
+            if (techniqueRadio) {
+                techniqueRadio.checked = true;
+            }
+            
+            // Set technique details based on the type
+            let techniqueDetails = prompt.technique.details + '\n\n';
+            if (prompt.technique.type === 'FEW_SHOT' && prompt.technique.examples) {
+                techniqueDetails += 'Examples:\n' + prompt.technique.examples.map(ex => 
+                    `Input: ${ex.input}\nOutput: ${ex.output}`
+                ).join('\n\n');
+            } else if (prompt.technique.type === 'CHAIN_OF_THOUGHT' && prompt.technique.steps) {
+                techniqueDetails += 'Steps:\n' + prompt.technique.steps.join('\n');
+            } else if (prompt.technique.type === 'ROLE_ASSIGNMENT' && prompt.technique.role) {
+                techniqueDetails += `Role Profile:\n- Background: ${prompt.technique.role.background}\n- Expertise: ${prompt.technique.role.expertise}\n- Style: ${prompt.technique.role.style}`;
+            }
+            document.getElementById('technique-details').value = techniqueDetails;
+            
+            // Set context
+            if (prompt.context) {
+                document.getElementById('context-input').value = prompt.context.background || '';
+                document.getElementById('examples-input').value = prompt.context.examples || '';
+                document.getElementById('role-input').value = prompt.context.role || '';
+            }
+            
+            // Reset to step 1
+            currentStep = 1;
+            updateProgressBar();
+        }
+
+        // Initialize the app when the page loads
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        // Improve prompt functionality
+        document.getElementById('improve-btn').addEventListener('click', function() {
+            const originalPrompt = document.getElementById('original-prompt').value;
+            
+            if (!originalPrompt) {
+                alert('Please enter a prompt to improve');
+                return;
+            }
+            
+            // Show loading state
+            this.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> Analyzing...';
+            this.disabled = true;
+            document.getElementById('improved-result').value = 'Analyzing your prompt...';
+            document.getElementById('explanation').innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i> Analyzing prompt structure and content...';
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Dummy improvement logic
+                const improvements = analyzeAndImprovePrompt(originalPrompt);
+                
+                // Update UI with results
+                document.getElementById('improved-result').value = improvements.improvedPrompt;
+                document.getElementById('explanation').innerHTML = improvements.explanation;
+                
+                // Reset button
+                this.innerHTML = '<i class="fas fa-magic mr-2"></i> Improve Prompt';
+                this.disabled = false;
+            }, 2000);
+        });
+
+        // Dummy prompt analysis function
+        function analyzeAndImprovePrompt(prompt) {
+            // Check for common patterns
+            const hasRole = /you are|act as|assume the role/i.test(prompt);
+            const hasFormat = /format|structure|style/i.test(prompt);
+            const hasConstraints = /must|should|need to|requirements/i.test(prompt);
+            const hasExamples = /example|for instance|such as/i.test(prompt);
+            const hasContext = /context|background|scenario/i.test(prompt);
+            
+            let improvements = [];
+            let suggestions = [];
+            
+            // Build improved prompt
+            let improvedPrompt = prompt;
+            
+            if (!hasRole) {
+                improvements.push("Added role assignment");
+                improvedPrompt = "You are an expert in this field with extensive experience.\n\n" + improvedPrompt;
+            }
+            
+            if (!hasFormat) {
+                improvements.push("Added output format specification");
+                improvedPrompt += "\n\nPlease provide your response in the following format:\n1. Main points\n2. Detailed explanation\n3. Examples or applications";
+            }
+            
+            if (!hasConstraints) {
+                improvements.push("Added specific constraints");
+                improvedPrompt += "\n\nEnsure your response is:\n- Concise and well-structured\n- Backed by relevant examples\n- Practical and actionable";
+            }
+            
+            if (!hasExamples) {
+                suggestions.push("Consider adding examples to clarify your expectations");
+            }
+            
+            if (!hasContext) {
+                suggestions.push("Adding background context could help get more relevant responses");
+            }
+            
+            // Build explanation HTML
+            const explanationHTML = `
+                <div class="space-y-4">
+                    ${improvements.length > 0 ? `
+                        <div class="p-3 bg-green-50 border border-green-100 rounded-lg">
+                            <p class="font-medium text-green-800 mb-2">Improvements Made:</p>
+                            <ul class="list-disc list-inside text-green-700">
+                                ${improvements.map(imp => `<li>${imp}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    
+                    ${suggestions.length > 0 ? `
+                        <div class="p-3 bg-yellow-50 border border-yellow-100 rounded-lg">
+                            <p class="font-medium text-yellow-800 mb-2">Additional Suggestions:</p>
+                            <ul class="list-disc list-inside text-yellow-700">
+                                ${suggestions.map(sug => `<li>${sug}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    
+                    <div class="p-3 bg-blue-50 border border-blue-100 rounded-lg">
+                        <p class="font-medium text-blue-800 mb-2">Prompt Analysis:</p>
+                        <ul class="list-none space-y-2 text-blue-700">
+                            <li><i class="fas ${hasRole ? 'fa-check text-green-500' : 'fa-times text-red-500'} mr-2"></i> Role Assignment</li>
+                            <li><i class="fas ${hasFormat ? 'fa-check text-green-500' : 'fa-times text-red-500'} mr-2"></i> Output Format</li>
+                            <li><i class="fas ${hasConstraints ? 'fa-check text-green-500' : 'fa-times text-red-500'} mr-2"></i> Specific Constraints</li>
+                            <li><i class="fas ${hasExamples ? 'fa-check text-green-500' : 'fa-times text-red-500'} mr-2"></i> Examples</li>
+                            <li><i class="fas ${hasContext ? 'fa-check text-green-500' : 'fa-times text-red-500'} mr-2"></i> Context</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+            
+            return {
+                improvedPrompt,
+                explanation: explanationHTML
+            };
+        }
+
+        // Copy improved prompt button
+        document.getElementById('copy-improved-btn').addEventListener('click', function() {
+            const improvedPrompt = document.getElementById('improved-result').value;
+            navigator.clipboard.writeText(improvedPrompt).then(() => {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check mr-2"></i> Copied!';
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                }, 2000);
+            });
+        });
+
+        // Use in builder button
+        document.getElementById('use-in-builder-btn').addEventListener('click', function() {
+            const improvedPrompt = document.getElementById('improved-result').value;
+            
+            // Switch to builder tab
+            document.querySelector('.tab-btn[data-tab="build"]').click();
+            
+            // Reset builder and set the improved prompt as the task
+            resetPromptBuilder();
+            document.getElementById('task-input').value = improvedPrompt;
+        });
     </script>
 </body>
 </html> 

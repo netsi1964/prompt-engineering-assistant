@@ -1,0 +1,55 @@
+{
+  "en": {
+    "PROMPT_ELEMENTS": {
+      "CLEAR_INSTRUCTIONS": "Clear instructions",
+      "SPECIFIC_CONSTRAINTS": "Specific constraints",
+      "DESIRED_FORMAT": "Desired format",
+      "TONE_STYLE": "Tone/style guidance",
+      "LENGTH_REQUIREMENTS": "Length requirements",
+      "TARGET_AUDIENCE": "Target audience",
+      "ERROR_HANDLING": "Error handling"
+    },
+    "TECHNIQUES": {
+      "FEW_SHOT": "Few-shot Prompting",
+      "CHAIN_OF_THOUGHT": "Chain-of-Thought",
+      "ROLE_ASSIGNMENT": "Role Assignment"
+    },
+    "CATEGORIES": {
+      "CREATIVE": "Creative",
+      "CODE": "Code",
+      "BUSINESS": "Business",
+      "EDUCATION": "Education",
+      "OTHER": "Other"
+    },
+    "BUILDER": {
+      "STEPS": {
+        "DEFINE_GOAL": "Define Goal",
+        "DRAFT_ELEMENTS": "Draft Elements",
+        "SELECT_TECHNIQUE": "Select Technique",
+        "ADD_CONTEXT": "Add Context",
+        "REFINEMENT": "Refinement",
+        "REVIEW": "Review"
+      },
+      "ELEMENTS": "Key Elements (Select all that apply)",
+      "TECHNIQUE": "Technique",
+      "CONTEXT": {
+        "BACKGROUND": "Context",
+        "EXAMPLES": "Examples",
+        "ROLE": "Role"
+      }
+    },
+    "BUTTONS": {
+      "NEXT": "Next",
+      "BACK": "Back",
+      "SAVE": "Save",
+      "SHARE": "Share",
+      "COPY": "Copy",
+      "USE_IN_BUILDER": "Use in Builder"
+    },
+    "ANALYSIS": {
+      "STRENGTHS": "Strengths",
+      "WEAKNESSES": "Areas for Improvement",
+      "SUGGESTIONS": "Suggestions"
+    }
+  }
+} 

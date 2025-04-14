@@ -1,0 +1,150 @@
+{
+  "prompts": [
+    {
+      "metadata": {
+        "id": "sci-fi-story-001",
+        "title": "Science Fiction Story",
+        "description": "Generate a creative science fiction story about first contact",
+        "category": "CREATIVE",
+        "createdAt": "2024-03-20T10:00:00Z",
+        "updatedAt": "2024-03-20T10:00:00Z",
+        "author": "prompt-assistant",
+        "isAnonymous": true,
+        "isPublic": true
+      },
+      "goal": "Generate a creative science fiction story",
+      "task": "Write a 500-word science fiction story set in 2150 about humanity's first contact with an alien civilization. The story should have a hopeful tone and include themes of cooperation and discovery.",
+      "promptElements": {
+        "CLEAR_INSTRUCTIONS": true,
+        "SPECIFIC_CONSTRAINTS": true,
+        "DESIRED_FORMAT": true,
+        "TONE_STYLE": true,
+        "LENGTH_REQUIREMENTS": true
+      },
+      "technique": {
+        "type": "FEW_SHOT",
+        "details": "Example structure provided:\n- Opening: Set the scene on a human exploration vessel\n- First Contact: Describe the initial encounter\n- Communication: Show the process of establishing understanding\n- Resolution: End with a meaningful exchange"
+      },
+      "context": {
+        "background": "Story should have a hopeful tone and include themes of cooperation",
+        "examples": "Example structure provided in the prompt",
+        "role": "Expert science fiction writer"
+      },
+      "analysis": {
+        "strengths": [
+          "Clear goal",
+          "Specific constraints",
+          "Good context",
+          "Well-structured format"
+        ],
+        "weaknesses": [
+          "Could add more character details",
+          "Need more specific tone guidance"
+        ],
+        "suggestions": [
+          "Add character profiles",
+          "Specify tone more precisely"
+        ],
+        "improvedPrompt": "Write a 500-word science fiction story set in 2150 about humanity's first contact with an alien civilization. Include at least two distinct alien characters and focus on the challenges and triumphs of establishing communication. Maintain a hopeful, optimistic tone throughout the narrative..."
+      },
+      "finalPrompt": "Write a 500-word science fiction story set in 2150 about humanity's first contact with an alien civilization. The story should have a hopeful tone and include themes of cooperation and discovery.",
+      "version": 1
+    },
+    {
+      "metadata": {
+        "id": "python-func-001",
+        "title": "Python Function Generator",
+        "description": "Generate a Python function with type hints and error handling",
+        "category": "CODE",
+        "createdAt": "2024-03-20T10:30:00Z",
+        "updatedAt": "2024-03-20T10:30:00Z",
+        "author": "prompt-assistant",
+        "isAnonymous": true,
+        "isPublic": true
+      },
+      "goal": "Create a well-documented Python function",
+      "task": "Write a Python function that takes a list of numbers and returns the sum of all even numbers. Include type hints, docstring, and error handling for non-numeric inputs.",
+      "promptElements": {
+        "CLEAR_INSTRUCTIONS": true,
+        "SPECIFIC_CONSTRAINTS": true,
+        "DESIRED_FORMAT": true,
+        "ERROR_HANDLING": true
+      },
+      "technique": {
+        "type": "CHAIN_OF_THOUGHT",
+        "details": "1. Define function signature with type hints\n2. Add comprehensive docstring\n3. Implement input validation\n4. Process the list\n5. Handle edge cases"
+      },
+      "context": {
+        "background": "Function should follow PEP 8 style guidelines",
+        "examples": "Input: [1,2,3,4] → Output: 6 (2+4)\nInput: [1,3,5] → Output: 0\nInput: ['1',2] → Raises TypeError",
+        "role": "Senior Python Developer"
+      },
+      "analysis": {
+        "strengths": [
+          "Clear requirements",
+          "Good error handling",
+          "Type safety"
+        ],
+        "weaknesses": [
+          "Could add performance considerations",
+          "Could add more edge cases"
+        ],
+        "suggestions": [
+          "Add time complexity note",
+          "Include memory usage guidelines"
+        ],
+        "improvedPrompt": "Write a Python function with type hints that calculates the sum of even numbers in a list..."
+      },
+      "finalPrompt": "Write a Python function that takes a list of numbers and returns the sum of all even numbers. Include type hints, docstring, and error handling for non-numeric inputs.",
+      "version": 1
+    },
+    {
+      "metadata": {
+        "id": "marketing-email-001",
+        "title": "Marketing Email Generator",
+        "description": "Create a compelling marketing email for eco-friendly products",
+        "category": "BUSINESS",
+        "createdAt": "2024-03-20T11:00:00Z",
+        "updatedAt": "2024-03-20T11:00:00Z",
+        "author": "prompt-assistant",
+        "isAnonymous": true,
+        "isPublic": true
+      },
+      "goal": "Create an engaging marketing email",
+      "task": "Create a compelling marketing email for a new eco-friendly product launch. Focus on sustainability benefits, unique features, and include a clear call-to-action.",
+      "promptElements": {
+        "CLEAR_INSTRUCTIONS": true,
+        "TONE_STYLE": true,
+        "DESIRED_FORMAT": true,
+        "TARGET_AUDIENCE": true
+      },
+      "technique": {
+        "type": "ROLE_ASSIGNMENT",
+        "details": "Act as a Senior Marketing Copywriter with expertise in sustainable products and email marketing"
+      },
+      "context": {
+        "background": "Target environmentally conscious consumers who value sustainability",
+        "examples": "Subject line examples:\n- 'Introducing: The Future of Sustainable Living'\n- 'Make a Difference with Our New Eco-Innovation'",
+        "role": "Senior Marketing Copywriter"
+      },
+      "analysis": {
+        "strengths": [
+          "Clear target audience",
+          "Strong value proposition",
+          "Action-oriented"
+        ],
+        "weaknesses": [
+          "Could be more specific about product features",
+          "Need more emotional triggers"
+        ],
+        "suggestions": [
+          "Add specific product benefits",
+          "Include social proof"
+        ],
+        "improvedPrompt": "Create a compelling marketing email for an eco-friendly product launch, highlighting three key sustainability benefits..."
+      },
+      "finalPrompt": "Create a compelling marketing email for a new eco-friendly product launch. Focus on sustainability benefits, unique features, and include a clear call-to-action.",
+      "version": 1
+    }
+  ]
+} 
