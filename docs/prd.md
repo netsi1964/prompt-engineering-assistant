@@ -1,15 +1,17 @@
 # Product Requirements Document: Prompt Engineering Assistant
 
-**Version:** 1.1
+**Version:** 1.2
 **Date:** April 14, 2025
 **Author:** Gemini Assistant (based on user input)
 
 ## 1. Introduction
 
-This document describes the requirements for the "Prompt Engineering Assistant," a web application hosted on Deno Deploy. The application's purpose is to assist users in creating effective prompts for Large Language Models (LLMs). This is achieved through three primary functions:
+This document describes the requirements for the "Prompt Engineering Assistant," a web application hosted on Deno Deploy. The application's purpose is to assist users in creating effective prompts for Large Language Models (LLMs). This is achieved through five primary functions:
 1.  A **step-by-step guide** that helps build prompts based on recognized guidelines.
 2.  A **"Talk with the guidelines"** feature where users can ask questions directly about the content of the document "Prompt Engineering_v7 (1).pdf".
 3.  An **"Improve my prompt"** feature that automatically suggests improvements to an existing prompt.
+4.  An **"Example Prompts"** feature that provides curated, high-quality prompt examples across different categories.
+5.  A **"Saved Prompts"** feature for premium users to store and manage their prompts.
 
 The application will utilize the Google Gemini LLM for analysis, answering, and improvement, and will feature a modern, responsive user interface built with Tailwind CSS. All UI text will be managed via an external JSON file to enable localization.
 
@@ -32,7 +34,7 @@ The application will utilize the Google Gemini LLM for analysis, answering, and 
 
 ## 4. Core Functionality / Requirements
 
-The application will feature tab-based navigation with (at minimum) the following sections: "Build Prompt" (step-by-step), "Talk with Guidelines", "Improve Prompt".
+The application will feature tab-based navigation with the following sections: "Build Prompt" (step-by-step), "Talk with Guidelines", "Improve Prompt", "Example Prompts", "Saved Prompts", and "About".
 
 ### 4.1 Build Prompt (Step-by-Step User Flow)
 
@@ -86,16 +88,95 @@ The application will feature tab-based navigation with (at minimum) the followin
         * Instruct Gemini to *explain* the main changes made and justify them by referencing specific principles/guidelines from the PDF.
     * **Output:** The application receives the improved prompt and the explanation from Gemini and displays both to the user.
 
-### 4.5 User Interface (UI) General
+### 4.5 Example Prompts (New Feature)
+
+* **Purpose:** Provide users with a curated collection of high-quality example prompts that demonstrate best practices.
+* **UI:**
+    * A dedicated tab/section.
+    * Search functionality to filter examples.
+    * Grid layout of example prompt cards.
+    * Each card displays:
+        * Category icon and title
+        * Task description
+        * Selected elements
+        * Chosen technique
+        * Context information
+        * "Use in Builder" button
+* **Categories:**
+    * Creative Writing
+    * Code Generation
+    * Business
+    * Education
+    * Other
+* **Example Structure:**
+    * Metadata (id, title, category, description)
+    * Goal and specific task
+    * Selected prompt elements (clear instructions, constraints, format, etc.)
+    * Chosen technique with detailed implementation
+    * Context (background, examples, role)
+* **Integration:**
+    * Examples can be loaded directly into the Build Prompt tab
+    * Maintains all selected options and context when transferred
+    * Provides visual feedback during loading
+
+### 4.6 Saved Prompts (Premium Feature)
+
+* **Purpose:** Allow premium users to save and manage their prompts.
+* **Access Control:**
+    * Requires user authentication
+    * Part of premium feature set
+    * Clear indication of premium status
+* **UI:**
+    * Premium feature promotion for non-authenticated users
+    * Sign-in/Sign-up options:
+        * Google authentication
+        * GitHub authentication
+        * Email/password authentication
+    * Saved prompts management interface (for authenticated users)
+
+### 4.7 Sharing Functionality
+
+* **Purpose:** Enable users to share their prompts with others.
+* **UI:**
+    * Share modal with:
+        * Prompt title input
+        * Optional description
+        * Category selection
+        * Anonymous sharing option
+        * Share URL generation
+    * Load shared prompt modal for recipients
+* **Features:**
+    * Unique URL generation for each shared prompt
+    * Copy URL functionality
+    * Anonymous sharing option
+    * Category tagging
+
+### 4.8 Authentication System
+
+* **Purpose:** Manage user access and premium features.
+* **UI:**
+    * Authentication modal with:
+        * Social login options (Google, GitHub)
+        * Email/password option
+        * Terms and privacy policy links
+    * User status indicator in header
+    * Premium badge for premium users
+* **Features:**
+    * Multiple authentication methods
+    * Session management
+    * Premium status indication
+    * Guest vs. Premium user differentiation
+
+### 4.9 User Interface (UI) General
 
 * **Technology:** Must be built with Tailwind CSS.
-* **Navigation:** Clear and distinct tab-based navigation between "Build Prompt", "Talk with Guidelines", and "Improve Prompt".
+* **Navigation:** Clear and distinct tab-based navigation between "Build Prompt", "Talk with Guidelines", "Improve Prompt", "Example Prompts", "Saved Prompts", and "About".
 * **Design:** Modern, clean, and intuitive design across all sections.
 * **Responsiveness:** Must function flawlessly on both desktop and mobile devices.
 * **Interactivity:** Dynamic UI updates, clear feedback, and status indicators (especially during API calls).
 * **Accessibility:** Should adhere to basic WCAG standards.
 
-### 4.6 Technology Stack
+### 4.10 Technology Stack
 
 * **Runtime/Hosting:** Deno / Deno Deploy
 * **Language:** TypeScript / JavaScript
@@ -105,11 +186,11 @@ The application will feature tab-based navigation with (at minimum) the followin
 * **Localization:** JSON file(s) for UI text strings.
 * **(Potentially for RAG):** Library for PDF parsing, text chunking, vector embeddings (e.g., via ONNX runtime or API calls to an embedding model), vector storage/search.
 
-### 4.7 Deployment
+### 4.11 Deployment
 
 * The application must be easily deployable on Deno Deploy.
 
-### 4.8 Localization
+### 4.12 Localization
 
 * **Requirement:** All text displayed in the user interface (buttons, labels, titles, instructions, placeholder text, etc.) must be defined in an external JSON file.
 * **Structure:** The JSON file should be logically organized with key-value pairs (e.g., `"button.improve": "Improve Prompt"`).
@@ -124,7 +205,7 @@ The application will feature tab-based navigation with (at minimum) the followin
 * **Context Preservation (Nice-to-have):** Consider if prompts created in "Build Prompt" can be easily sent to "Improve Prompt".
 * **Performance:** Fast loading and responsiveness. Efficient handling of potentially large amounts of text from the PDF (RAG).
 
-## 6. Non-Goals / Future Considerations (Version 1.1)
+## 6. Non-Goals / Future Considerations (Version 1.2)
 
 * **Advanced Techniques:** Still does not support complex techniques like Self-consistency, ToT, ReAct, etc., beyond what can be asked about in "Talk with Guidelines".
 * **Direct Model Configuration:** No UI for adjusting LLM parameters.
@@ -133,6 +214,10 @@ The application will feature tab-based navigation with (at minimum) the followin
 * **Direct LLM Execution:** The app does not execute prompts to get a final result but focuses on building, analyzing, and improving them.
 * **Multi-language UI:** Supports only one language in the initial UI but is prepared for more via the JSON structure.
 * **Advanced RAG Tuning:** The first version of RAG might be basic; fine-tuning chunking, embedding models, and retrieval strategy is future optimization.
+* **Advanced Sharing Features:** No support for collaborative editing or prompt versioning.
+* **Team Accounts:** No support for team/organization accounts or shared prompt libraries.
+* **Advanced Analytics:** No detailed analytics on prompt usage or effectiveness.
+* **Custom Categories:** Users cannot create custom categories for saved prompts.
 
 ## 7. Success Metrics
 
