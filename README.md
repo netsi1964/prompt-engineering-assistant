@@ -2,6 +2,8 @@
 
 A web application that helps users create effective prompts for Large Language Models (LLMs).
 
+[Try it out here](https://netsi1964.github.io/prompt-engineering-assistant/)
+
 ## Features
 
 - **Prompt Builder**: Step-by-step guide to building effective prompts
@@ -42,7 +44,7 @@ A web application that helps users create effective prompts for Large Language M
 prompt-engineering-assistant/
 ├── docs/               # Documentation
 │   └── prd.md         # Product Requirements Document
-├── all.html           # Main application file
+├── index.html         # Main application file
 ├── translations.json  # UI text translations
 └── example-prompts.json # Curated example prompts
 ```
@@ -69,6 +71,10 @@ prompt-engineering-assistant/
 - Categorized prompt examples
 - One-click use in builder
 - Various use cases covered
+
+## Deployment
+
+The application is deployed using GitHub Pages and can be accessed at [https://netsi1964.github.io/prompt-engineering-assistant/](https://netsi1964.github.io/prompt-engineering-assistant/)
 
 ## Contributing
 
